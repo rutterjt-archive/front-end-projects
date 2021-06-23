@@ -4,3 +4,11 @@ Small front-end web development projects, comprised of individual components, fu
 Projects ideas were inspired by Frontend Mentor.
 All designs are adapted from [here](https://dev.to/frontendmentor/16-front-end-projects-with-designs-to-help-improve-your-coding-skills-5ajl). 
 All code is mine.
+
+## 01-price-grid-component
+
+A responsive pricing component, with interactive call-to-action button.
+
+View the original challenge [here](https://www.frontendmentor.io/challenges/single-price-grid-component-5ce41129d0ff452fec5abbbc).
+
+See it live: [https://jonrutter-price-grid-component.netlify.app/](https://jonrutter-price-grid-component.netlify.app/)
