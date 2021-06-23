@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "eslint": "^7.29.0",
+    "parcel": "^2.0.0-beta.2",
+    "prettier": "^2.3.1"
+  }
+}
