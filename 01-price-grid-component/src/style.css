@@ -1,0 +1,176 @@
+/*
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+- Font size: 16px
+- Family: [Karla](https://fonts.google.com/specimen/Karla)
+- Weights: 400, 700
+
+ */
+
+/* || general styling */
+
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --light-cyan: #4abebd;
+  --yellow: hsl(71, 73%, 54%);
+  --dark-yellow: hsl(71, 73%, 44%);
+  --light-gray: hsl(204, 43%, 93%);
+  --gray-blue: hsl(218, 22%, 67%);
+  font-size: 16px;
+  font-family: Karla, sans-serif;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--light-gray);
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  font-size: 100%;
+  line-height: inherit;
+  font-family: inherit;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+p:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+/* || card */
+
+.card {
+  width: 320px;
+  margin: 3rem auto;
+  background-color: white;
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  box-shadow: 0 2.8px 2.2px rgba(152, 166, 189, 0.12),
+    0 6.7px 5.3px rgba(152, 166, 189, 0.12),
+    0 12.5px 10px rgba(152, 166, 189, 0.14),
+    0 22.3px 17.9px rgba(152, 166, 189, 0.16);
+  overflow: hidden;
+}
+
+.card__top {
+  padding: 2.2rem 2.5rem;
+  color: var(--gray-blue);
+}
+
+.card__title {
+  color: var(--cyan);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.card__subtitle {
+  color: var(--yellow);
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.card__bottom-left {
+  padding: 2.2rem 2.5rem;
+  background-color: var(--cyan);
+  color: white;
+}
+
+.card__section-title {
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+}
+
+.price-box {
+  display: flex;
+  align-items: center;
+}
+
+.price {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.price-sub {
+  color: var(--light-gray);
+  margin-left: 1rem;
+  opacity: 0.8;
+}
+
+.btn {
+  width: 100%;
+  margin: auto;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn--cta {
+  font-weight: 700;
+  background-color: var(--yellow);
+  color: white;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06);
+}
+
+.btn--cta:hover {
+  background-color: var(--dark-yellow);
+}
+
+.card__bottom-right {
+  padding: 2.2rem 2.5rem;
+  background-color: var(--light-cyan);
+  color: white;
+}
+
+.text-small {
+  font-size: 14px;
+}
+
+@media screen and (min-width: 800px) {
+  .card {
+    grid-template-columns: 1fr 1fr;
+    width: 640px;
+  }
+
+  .card__top {
+    grid-column: 1 / 3;
+  }
+  .card__bottom-left {
+    grid-column: 1 / 2;
+  }
+  .card__bottom-right {
+    grid-column: 2 / 3;
+  }
+}
