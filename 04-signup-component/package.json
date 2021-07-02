@@ -4,7 +4,9 @@
   "description": "An intro page with a signup-component, with custom client-side form validation.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel serve ./src/index.html",
+    "build": "parcel build ./src/index.html --dist-dir public"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,7 @@
   },
   "homepage": "https://github.com/jonrutter/front-end-projects#readme",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.0-nightly.751",
     "eslint": "^7.29.0",
     "parcel": "^2.0.0-beta.2",
     "prettier": "^2.3.2"
