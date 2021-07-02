@@ -1,7 +1,7 @@
 {
-  "name": "signup-component",
+  "name": "signup-page",
   "version": "1.0.0",
-  "description": "An intro page with a signup-component, with custom client-side form validation.",
+  "description": "An intro page with a signup component, with custom client-side form validation that dynamically updates as the user works through the form.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel serve ./src/index.html",
