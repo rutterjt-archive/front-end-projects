@@ -1,0 +1,26 @@
+{
+  "name": "price-component",
+  "version": "1.0.0",
+  "description": "An interactive pricing component with a toggle switch that dynamically updates the prices.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel serve ./src/index.html",
+    "build": "parcel build ./src/index.html --dist-dir public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonrutter/front-end-projects.git"
+  },
+  "author": "Jon Rutter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jonrutter/front-end-projects/issues"
+  },
+  "homepage": "https://github.com/jonrutter/front-end-projects#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.0-nightly.751",
+    "eslint": "^7.29.0",
+    "parcel": "^2.0.0-beta.2",
+    "prettier": "^2.3.2"
+  }
+}
