@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/jonrutter/front-end-projects#readme",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.0-nightly.752",
     "eslint": "^7.30.0",
     "parcel": "^2.0.0-beta.2",
     "prettier": "^2.3.2"
