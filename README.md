@@ -37,3 +37,11 @@ See it live: [https://jonrutter-huddle-landing-page.netlify.app/](https://jonrut
 An demo intro page with a signup component, with custom client-side form validation that dynamically updates as the user works through the form.
 
 See it live: [https://jonrutter-signup-page.netlify.app/](https://jonrutter-signup-page.netlify.app/)
+
+## 05-price-component
+
+![Preview of the price component](./previews/05.png)
+
+An interactive pricing component with a toggle switch that dynamically updates the prices.
+
+See it live: [https://jonrutter-price-component.netlify.app/](https://jonrutter-price-component.netlify.app/)
