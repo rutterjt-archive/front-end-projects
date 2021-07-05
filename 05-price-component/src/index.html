@@ -29,10 +29,21 @@
   <body>
     <main>
       <h1>Our Pricing</h1>
-      <label class="toggle__label" for="toggle">
-        <span>Annually</span><span>Monthly</span>
-      </label>
-      <input class="toggle" id="toggle" type="checkbox" />
+      <div class="toggle__wrap">
+        <label class="toggle__label" for="toggle">
+          <span>Annually</span>
+          <input
+            class="toggle"
+            id="toggle"
+            name="toggle"
+            type="checkbox"
+            checked
+          />
+          <span class="toggle__display"></span>
+          <span>Monthly</span>
+        </label>
+      </div>
+
       <div class="card__grid">
         <!-- Basic -->
         <section class="card">

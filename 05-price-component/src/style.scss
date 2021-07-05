@@ -1,0 +1,91 @@
+// || Variables
+
+$light: hsl(240, 78%, 98%);
+$light-blue: hsl(236, 72%, 79%);
+$light-gray: hsl(234, 14%, 74%);
+$gray: hsl(233, 13%, 49%);
+$dark-gray: hsl(232, 13%, 33%);
+$gradient: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+
+// || General styles
+:root {
+  font-size: 15px;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  min-height: 100vh;
+}
+
+main {
+  min-height: 100vh;
+  background: url('./images/bg-top.svg') no-repeat top right,
+    url('./images/bg-bottom.svg') no-repeat bottom left, $light;
+}
+
+// || Toggle
+
+.toggle__wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.toggle__label {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.toggle__label > * {
+  margin-right: 1.5rem;
+}
+
+.toggle {
+  position: absolute;
+  top: auto;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+}
+
+.toggle__display {
+  position: relative;
+  width: 3rem;
+  height: 1.5rem;
+  background: $gradient;
+  border-radius: 1.2rem;
+}
+
+.toggle__label:hover .toggle__display {
+  background: $light-blue;
+}
+
+.toggle__display::before {
+  content: '';
+  position: absolute;
+  top: 0.15rem;
+  left: 1.65rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: white;
+  border-radius: 50%;
+  transition: left 0.2s ease-in-out;
+}
+
+.toggle:checked + .toggle__display::before {
+  left: 0.15rem;
+}
