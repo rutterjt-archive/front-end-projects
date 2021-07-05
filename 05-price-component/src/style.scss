@@ -55,6 +55,7 @@ h1 {
   display: flex;
   justify-content: center;
   position: relative;
+  background: transparent;
 }
 
 .toggle__label > * {
@@ -129,10 +130,6 @@ h1 {
     margin-bottom: 1rem;
   }
 
-  &__price--monthly {
-    display: none;
-  }
-
   &__list {
     list-style: none;
     margin-bottom: 2rem;
@@ -151,6 +148,10 @@ h1 {
     background: $gradient;
     color: white;
   }
+}
+
+.hidden {
+  display: none;
 }
 
 // || btn
@@ -196,7 +197,7 @@ h1 {
 
 // || Media queries
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1000px) {
   main {
     background: url('./images/bg-top.svg') no-repeat top right,
       url('./images/bg-bottom.svg') no-repeat bottom left, $light;
