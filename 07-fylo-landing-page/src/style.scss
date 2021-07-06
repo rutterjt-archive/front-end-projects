@@ -1,0 +1,29 @@
+// Variables
+
+$bg-intro: hsl(217, 28%, 15%);
+$bg-main: hsl(218, 28%, 13%);
+$bg-footer: hsl(216, 53%, 9%);
+$bg-testimonial: hsl(219, 30%, 18%);
+
+$cyan: hsl(176, 68%, 64%);
+$blue: hsl(198, 60%, 50%);
+$error: hsl(0, 100%, 63%);
+
+$heading-font: Raleway, sans-serif;
+$body-font: "Open Sans", sans-serif;
+
+// General styles
+
+:root {
+  font-size: 100%;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
