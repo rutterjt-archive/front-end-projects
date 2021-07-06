@@ -6,3 +6,176 @@ $gray-blue: hsl(216, 30%, 68%);
 $dark: hsl(270, 9%, 17%);
 $gray: hsl(273, 4%, 51%);
 $light: hsl(0, 0%, 98%);
+
+$header-font: 'DM Serif Display', serif;
+$body-font: Karla, sans-serif;
+
+$header-height: 5rem;
+$site-max-width: 1200px;
+
+:root {
+  font-size: 16px;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: $body-font;
+}
+
+button {
+  font-size: 100%;
+  color: inherit;
+  line-height: inherit;
+  background: transparent;
+  border: none;
+  display: block;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// || header
+
+.header {
+  max-width: $site-max-width;
+  margin: auto;
+  padding: 1.5rem;
+  height: $header-height;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// || nav
+
+.nav {
+  &__toggle {
+    line-height: 1;
+  }
+
+  &__list {
+    display: none;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+
+    &--open {
+      font-size: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      padding: 1.5rem;
+      position: absolute;
+      top: $header-height;
+      left: 0;
+      height: calc(100vh - 5rem);
+      width: 100%;
+
+      color: white;
+      text-align: center;
+      font-weight: 700;
+      background: url('./images/bg-pattern-mobile-nav.svg') no-repeat bottom
+          center / 100%,
+        $dark;
+
+      & li {
+        display: block;
+        margin: 1rem 0;
+        height: auto;
+      }
+    }
+  }
+}
+
+// || btn
+
+.btn {
+  border: 2px solid white;
+  padding: 0.5rem 2rem;
+  display: block;
+  text-align: center;
+
+  &--cta {
+    width: 100%;
+
+    &:hover {
+      background-color: white;
+      color: $dark;
+    }
+  }
+}
+
+// || utility
+.hidden {
+  display: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+// || media queries
+@media screen and (min-width: 768px) {
+  .nav {
+    &__toggle {
+      display: none;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: auto;
+      position: relative;
+      font-weight: 700;
+
+      & li {
+        margin-left: 2rem;
+      }
+    }
+
+    &__link {
+      color: $gray;
+
+      &:hover {
+        color: $dark;
+      }
+    }
+  }
+
+  .btn {
+    &--cta {
+      border-color: $dark;
+      color: $dark;
+      font-weight: 700;
+
+      &:hover {
+        background-color: $dark;
+        color: white;
+      }
+    }
+  }
+}
