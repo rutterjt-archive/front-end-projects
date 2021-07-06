@@ -1,3 +1,7 @@
+// !!!!!!!!!!!!!!!!!!!
+// Left off: "We're different section"
+// Just finished positioning the heading to avoid the padding from the landing section overlapping the text
+
 // || Variables
 
 $dark-violet: hsl(256, 26%, 20%);
@@ -59,6 +63,93 @@ img {
   height: auto;
 }
 
+h1,
+h2,
+h3 {
+  font-family: $header-font;
+  font-weight: 400;
+}
+
+// || card
+
+.card {
+  text-align: center;
+  padding: 1.5rem;
+  // display: flex;
+  // flex-direction: column;
+
+  &__img {
+    margin-bottom: 1.5rem;
+  }
+
+  &__title {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  & p {
+    color: $gray;
+  }
+}
+
+// || btn
+
+.btn {
+  border: 2px solid white;
+  padding: 0.5rem 2rem;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+
+  &--cta {
+    display: block;
+    width: 100%;
+
+    &:hover {
+      background-color: white;
+      color: $dark;
+    }
+  }
+}
+
+// || utility
+.hidden {
+  display: none;
+}
+
+.section--fluid {
+  width: 100%;
+}
+
+.section--truncated {
+  margin: 1.5rem;
+}
+
+.section {
+  width: 100%;
+  max-width: $site-max-width;
+  margin: auto;
+
+  &--fluid {
+    max-width: 100%;
+  }
+
+  &--truncated {
+    margin: 1.5rem;
+  }
+}
+
+.bg {
+  &-dark {
+    background-color: $dark-violet;
+    color: white;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
 // || header
 
 .header {
@@ -93,6 +184,7 @@ img {
       left: 0;
       height: calc(100vh - 5rem);
       width: 100%;
+      z-index: 2;
 
       color: white;
       text-align: center;
@@ -110,31 +202,183 @@ img {
   }
 }
 
-// || btn
+// || landing section
 
-.btn {
-  border: 2px solid white;
-  padding: 0.5rem 2rem;
-  display: block;
-  text-align: center;
+.landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 
-  &--cta {
-    width: 100%;
+  // Right-side on desktop (top on mobile), contains image
+  &__right {
+    order: 1;
+  }
 
-    &:hover {
-      background-color: white;
-      color: $dark;
+  &__img {
+    display: block;
+  }
+
+  // Left-side on desktop (bottom on mobile), contains heading text
+  &__left {
+    order: 2;
+    text-align: center;
+    position: relative;
+    // Normally, background images cannot overflow their container.
+    // But the design mockup wants the bottom-right background image to flow out into the next section.
+    // The trick to getting background images to overflow:
+    // Give the container a negative margin-bottom, according to how much you want the image to overlap
+    // Then increase the container's padding-bottom to compensate.
+
+    // Note: this will cause the container's padding to overlap the content below, which can cause problems. But in this case, the overlap will be mostly whitespace.
+    padding: 5rem 1.5rem 16rem;
+    margin-bottom: -11rem;
+
+    background: url('./images/bg-pattern-intro-left-mobile.svg') no-repeat top
+        left,
+      url('./images/bg-pattern-intro-right-mobile.svg') no-repeat bottom right;
+
+    h1 {
+      font-size: 2.9rem;
+      line-height: 1;
+      margin-bottom: 1rem;
     }
+
+    p {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__img-positioned {
+    position: absolute;
+    user-select: none;
+  }
+  #landing-img-mobile-top-left {
+    top: 0;
+    left: 0;
+  }
+
+  #landing-img-mobile-top-left {
+    right: 0;
   }
 }
 
-// || utility
-.hidden {
-  display: none;
+// || features section
+
+.features {
+  padding-top: 9rem;
+
+  & h2 {
+    position: relative;
+    text-align: center;
+    font-size: 2.75rem;
+    line-height: 3;
+
+    &:before {
+      content: '';
+      height: 1px;
+      width: 10rem;
+      position: absolute;
+      background-color: $gray;
+      top: 0;
+      right: calc(50% - 5rem);
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2rem;
+    // justify-content: center;
+    margin-bottom: 8rem;
+  }
 }
 
-.no-scroll {
-  overflow: hidden;
+// || find out more
+
+.find-out-more {
+  padding: 4rem 2rem;
+  display: grid;
+  place-items: center;
+  grid-gap: 2.5rem;
+  background-image: url('./images/bg-pattern-how-we-work-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: top right;
+  // margin-bottom: 10rem;
+
+  & h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 1;
+  }
+}
+
+// || footer
+
+.footer {
+  margin-top: 10rem;
+  background-color: $light;
+  padding: 1.5rem;
+  background: url('./images/bg-pattern-footer-mobile.svg') no-repeat top left;
+
+  &__top,
+  &__bottom {
+    width: 100%;
+    max-width: $site-max-width;
+    margin: auto;
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 1.5rem 2rem;
+    border-bottom: 1px solid #d9d9d9;
+  }
+
+  &__logo {
+    margin-bottom: 2rem;
+  }
+
+  &__social-list {
+    display: flex;
+    align-items: center;
+
+    & > *:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__social-link:hover {
+    filter: brightness(50%);
+  }
+
+  &__bottom {
+    text-transform: uppercase;
+    padding-top: 1rem;
+  }
+
+  &__title {
+    font-size: 1rem;
+    color: $gray;
+  }
+
+  &__list {
+    margin-bottom: 2rem;
+
+    & > *:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__link {
+    color: $dark-violet;
+    font-weight: 700;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 // || media queries
