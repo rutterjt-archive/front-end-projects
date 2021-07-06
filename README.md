@@ -46,7 +46,7 @@ An interactive pricing component with a toggle switch that dynamically updates t
 
 See it live: [https://jonrutter-price-component.netlify.app/](https://jonrutter-price-component.netlify.app/)
 
-##06-insure-landing-page
+## 06-insure-landing-page
 
 ![Preview of insure landing page](./previews/06.png)
 
