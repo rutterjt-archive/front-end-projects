@@ -100,13 +100,18 @@ h3 {
   display: inline-block;
   text-align: center;
   text-transform: uppercase;
+  font-weight: 700;
+
+  &:hover {
+    background-color: white;
+    color: $dark-violet;
+  }
 
   &--cta {
     display: block;
     width: 100%;
 
     &:hover {
-      background-color: white;
       color: $dark;
     }
   }
