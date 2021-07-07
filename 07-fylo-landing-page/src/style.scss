@@ -10,7 +10,7 @@ $blue: hsl(198, 60%, 50%);
 $error: hsl(0, 100%, 63%);
 
 $heading-font: Raleway, sans-serif;
-$body-font: "Open Sans", sans-serif;
+$body-font: 'Open Sans', sans-serif;
 
 // General styles
 
@@ -26,4 +26,55 @@ $body-font: "Open Sans", sans-serif;
   box-sizing: inherit;
   padding: 0;
   margin: 0;
+}
+
+body {
+  font-family: $body-font;
+  color: white;
+  background-color: $bg-main;
+  font-size: 14px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  background-color: transparent;
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font-size: 100%;
+  font-family: inherit;
+  line-height: inherit;
+  overflow: visible;
+}
+
+button {
+  text-transform: none;
+  -webkit-appearance: none;
+  color: inherit;
+  background: transparent;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+address {
+  font-style: normal;
+}
+
+h1,
+h2,
+h3 {
 }
