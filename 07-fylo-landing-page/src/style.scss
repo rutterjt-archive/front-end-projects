@@ -78,3 +78,35 @@ h1,
 h2,
 h3 {
 }
+
+// || header and nav
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1.5rem;
+
+  &__logo {
+    width: 5rem;
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+    justify-content: flex-end;
+
+    & li {
+      margin-left: 2rem;
+    }
+  }
+
+  &__link {
+    &:hover {
+      text-decoration: underline;
+      font-weight: 700;
+    }
+  }
+}
