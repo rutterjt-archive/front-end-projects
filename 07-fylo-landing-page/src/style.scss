@@ -143,6 +143,15 @@ h1 {
       $bg-intro;
     margin-bottom: 8rem;
   }
+
+  &--features {
+    max-width: 1200px;
+    margin: 0rem auto 8rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(1fr, 400px));
+    justify-items: center;
+    grid-gap: 1rem;
+  }
 }
 
 .landing {
@@ -178,6 +187,15 @@ h1 {
   }
 }
 
+// || card
+
+.card {
+  padding: 2rem;
+  text-align: center;
+  max-width: 400px;
+}
+
+// || media queries
 @media screen and (min-width: 992px) {
   .header {
     padding: 3rem 4rem;
@@ -190,6 +208,10 @@ h1 {
   .section {
     &--landing {
       background-image: url('./images/bg-curvy-desktop.svg');
+    }
+
+    &--features {
+      grid-template-columns: 1fr 1fr;
     }
   }
 }
