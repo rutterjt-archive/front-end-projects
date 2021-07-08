@@ -198,23 +198,32 @@
       </div>
 
       <!-- Get-started section -->
-      <section class="section get-started">
-        <h2 class="section__title">Get early access today</h2>
-        <p class="section__para">
-          It only takes a minute to sign up and our free starter tier is
-          extremely generous. If you have any questions, our support team would
-          be happy to help you.
-        </p>
-        <form class="form" novalidate>
-          <label for="email-signup" class="form__label-offscreen"
-            >Email address</label
-          >
-          <input type="email" class="form__input" id="email-signup" />
-          <button type="submit" class="btn btn--cta">
-            Get Started For Free
-          </button>
-        </form>
-      </section>
+      <div class="section section--get-started">
+        <section class="get-started">
+          <h2 class="section__title">Get early access today</h2>
+          <p class="section__para">
+            It only takes a minute to sign up and our free starter tier is
+            extremely generous. If you have any questions, our support team
+            would be happy to help you.
+          </p>
+          <form class="form" novalidate>
+            <label for="email-signup" class="form__label-offscreen"
+              >Email address</label
+            >
+            <div class="form__row">
+              <input
+                type="email"
+                class="form__input"
+                id="email-signup"
+                placeholder="email@example.com"
+              />
+              <button type="submit" class="btn btn--submit">
+                Get Started For Free
+              </button>
+            </div>
+          </form>
+        </section>
+      </div>
     </main>
 
     <footer class="footer">
