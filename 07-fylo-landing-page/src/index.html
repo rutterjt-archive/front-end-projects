@@ -21,13 +21,14 @@
     />
 
     <!-- Font awesome -->
-    <!-- <script
+    <script
       src="https://kit.fontawesome.com/4a1476df0c.js"
       crossorigin="anonymous"
-    ></script> -->
+    ></script>
 
     <!-- Own Stylesheet -->
     <link rel="stylesheet" href="./style.scss" />
+    <script defer src="./main.js"></script>
   </head>
   <body>
     <header class="header">
@@ -217,9 +218,10 @@
                 id="email-signup"
                 placeholder="email@example.com"
               />
-              <button type="submit" class="btn btn--submit">
+              <button type="submit" class="btn btn--submit form__submit">
                 Get Started For Free
               </button>
+              <small class="form__input-msg"></small>
             </div>
           </form>
         </section>
@@ -231,49 +233,55 @@
         <img class="footer__logo" src="./images/logo.svg" alt="Fylo" />
       </div>
       <div class="footer__bottom">
-        <div class="footer__location">
-          <img class="footer__icon" src="./images/icon-location.svg" alt="" />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua
-          </p>
+        <div class="footer__col footer__col--left">
+          <div class="footer__location">
+            <img class="footer__icon" src="./images/icon-location.svg" alt="" />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua
+            </p>
+          </div>
+          <address class="footer__contact">
+            <img class="footer__icon" src="./images/icon-phone.svg" alt="" />
+            <a href="tel:1-543-123-4567" class="footer__link"
+              >+1-543-123-4567</a
+            >
+            <img class="footer__icon" src="./images/icon-email.svg" alt="" />
+            <a href="mailto:example@fylo.com" class="footer__link"
+              >example@fylo.com</a
+            >
+          </address>
         </div>
-        <address class="footer__contact">
-          <img class="footer__icon" src="./images/icon-phone.svg" alt="" />
-          <a href="tel:1-543-123-4567" class="footer__link">+1-543-123-4567</a>
-          <img class="footer__icon" src="./images/icon-email.svg" alt="" />
-          <a href="mailto:example@fylo.com" class="footer__link"
-            >example@fylo.com</a
-          >
-        </address>
-        <ul class="footer__links">
-          <li><a href="#" class="footer__link">About Us</a></li>
-          <li><a href="#" class="footer__link">Jobs</a></li>
-          <li><a href="#" class="footer__link">Press</a></li>
-          <li><a href="#" class="footer__link">Blog</a></li>
-        </ul>
-        <ul class="footer__links">
-          <li><a href="#" class="footer__link">Contact Us</a></li>
-          <li><a href="#" class="footer__link">Terms</a></li>
-          <li><a href="#" class="footer__link">Privacy</a></li>
-        </ul>
-        <ul class="footer__social">
-          <li>
-            <a href="#" class="footer__social-link" aria-label="Facebook"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-          </li>
-          <li>
-            <a href="#" class="footer__social-link" aria-label="Twitter"
-              ><i class="fab fa-twitter"></i
-            ></a>
-          </li>
-          <li>
-            <a href="#" class="footer__social-link" aria-label="Instagram"
-              ><i class="fab fa-instagram"></i
-            ></a>
-          </li>
-        </ul>
+        <div class="footer__col footer__col--right">
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">About Us</a></li>
+            <li><a href="#" class="footer__link">Jobs</a></li>
+            <li><a href="#" class="footer__link">Press</a></li>
+            <li><a href="#" class="footer__link">Blog</a></li>
+          </ul>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">Contact Us</a></li>
+            <li><a href="#" class="footer__link">Terms</a></li>
+            <li><a href="#" class="footer__link">Privacy</a></li>
+          </ul>
+          <ul class="footer__social">
+            <li>
+              <a href="#" class="footer__social-link" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="footer__social-link" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="footer__social-link" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
   </body>

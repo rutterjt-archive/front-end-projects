@@ -1,3 +1,9 @@
+// !!!!!!!!!
+// Finishe Getting Started section
+// TODO:
+// Footer
+// Make sure see-how-it-works sections looks ok on smaller devices, esp text
+
 // Variables
 
 $bg-intro: hsl(217, 28%, 15%);
@@ -228,8 +234,89 @@ h1 {
 }
 
 .footer {
-  padding-top: 16rem;
+  padding: 16rem 2rem 5rem;
   background-color: $bg-footer;
+  width: 100%;
+
+  &__top,
+  &__bottom {
+    max-width: 1400px;
+    margin: auto;
+  }
+
+  &__top {
+    margin-bottom: 2rem;
+  }
+
+  &__bottom {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 4rem;
+  }
+
+  &__location,
+  &__contact {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 1rem 2rem;
+    align-items: start;
+    line-height: 2;
+  }
+
+  &__contact {
+    align-items: center;
+  }
+
+  &__col {
+    display: grid;
+    grid-gap: 2rem;
+    align-items: start;
+
+    &--left {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    &--right {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__links {
+    & li {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__link:hover {
+    font-weight: 700;
+  }
+
+  &__social {
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: center;
+
+    & li {
+      margin-right: 1rem;
+    }
+
+    &-link i {
+      display: inline-block;
+      font-size: 1rem;
+      line-height: 2rem;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      text-align: center;
+      vertical-align: middle;
+      border: 1px solid white;
+
+      &:hover {
+        color: $cyan;
+        border-color: $cyan;
+      }
+    }
+  }
 }
 
 // || btn
@@ -318,14 +405,28 @@ h1 {
     margin-top: 2rem;
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 1.5rem;
+    grid-gap: 1rem;
   }
 
   &__input {
+    width: 100%;
     padding: 0.75rem 1.5rem;
     border-radius: 1.5rem;
     border: none;
     outline: none;
+    order: 1;
+  }
+
+  &__input-msg {
+    color: $error;
+    text-align: left;
+    padding-left: 1.5rem;
+    order: 2;
+    transform: translateY(-1rem);
+  }
+
+  &__submit {
+    order: 3;
   }
 }
 
@@ -337,11 +438,21 @@ h1 {
   .form {
     &__row {
       grid-template-columns: 2fr 1fr;
+      grid-gap: 0.25rem 1.5rem;
+    }
+
+    &__input-msg {
+      order: 3;
+      transform: none;
+    }
+
+    &__submit {
+      order: 2;
     }
   }
 
   .footer {
-    padding-top: 14rem;
+    padding: 14rem 2rem 5rem;
   }
 }
 
@@ -387,6 +498,21 @@ h1 {
     padding: 2rem 6rem;
     & h2 {
       font-size: 2rem;
+    }
+  }
+
+  .footer {
+    &__bottom {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &__col {
+      &--right {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    &__social {
+      grid-column: auto;
     }
   }
 }
