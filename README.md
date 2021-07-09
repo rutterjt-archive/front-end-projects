@@ -46,10 +46,18 @@ An interactive pricing component with a toggle switch that dynamically updates t
 
 See it live: [https://jonrutter-price-component.netlify.app/](https://jonrutter-price-component.netlify.app/)
 
-#06-insure-landing-page
+## 06-insure-landing-page
 
 ![Preview of insure landing page](./previews/06.png)
 
 A multi-section landing page for an insurance company, with a dropdown navigation menu on mobile devices.
 
 See it live: [https://jonrutter-insure-landing-page.netlify.app/](https://jonrutter-insure-landing-page.netlify.app/)
+
+## 07-fylo-landing-page
+
+![Preview of Fylo landing page](./previews/07.png)
+
+A dark-theme, multi-section landing page for a tech company.
+
+See it live: [https://jonrutter-fylo-landing-page.netlify.app/](https://jonrutter-fylo-landing-page.netlify.app/)
