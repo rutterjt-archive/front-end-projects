@@ -1,0 +1,518 @@
+// !!!!!!!!!
+// Finishe Getting Started section
+// TODO:
+// Footer
+// Make sure see-how-it-works sections looks ok on smaller devices, esp text
+
+// Variables
+
+$bg-intro: hsl(217, 28%, 15%);
+$bg-main: hsl(218, 28%, 13%);
+$bg-footer: hsl(216, 53%, 9%);
+$bg-testimonial: hsl(219, 30%, 18%);
+
+$cyan: hsl(176, 68%, 64%);
+$blue: hsl(198, 60%, 50%);
+$error: hsl(0, 100%, 63%);
+
+$heading-font: Raleway, sans-serif;
+$body-font: 'Open Sans', sans-serif;
+
+// General styles
+
+:root {
+  font-size: 100%;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: $body-font;
+  color: white;
+  background-color: $bg-main;
+  font-size: 14px;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  background-color: transparent;
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+button,
+input {
+  font-size: 100%;
+  font-family: inherit;
+  line-height: inherit;
+  overflow: visible;
+}
+
+button {
+  text-transform: none;
+  -webkit-appearance: none;
+  color: inherit;
+  background: transparent;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+address {
+  font-style: normal;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $heading-font;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+// || header and nav
+
+.header {
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1.5rem;
+  color: white;
+  background-color: $bg-intro;
+
+  &__logo {
+    width: 5rem;
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+    justify-content: flex-end;
+
+    & li {
+      margin-left: 2rem;
+    }
+  }
+
+  &__link {
+    &:hover {
+      text-decoration: underline;
+      font-weight: 700;
+    }
+  }
+}
+
+// || section
+
+.section {
+  width: 100%;
+
+  &--landing {
+    background: url('./images/bg-curvy-desktop.svg') no-repeat bottom center /
+        100%,
+      $bg-intro;
+    margin-bottom: 8rem;
+  }
+
+  &--features {
+    max-width: 1000px;
+    margin: 0 auto 8rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(1fr, 400px));
+    justify-items: center;
+    grid-gap: 1rem;
+  }
+
+  &--how-it-works,
+  &--testimonials {
+    max-width: 1400px;
+    padding: 2rem;
+  }
+
+  &--how-it-works {
+    margin: 0 auto 8rem;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    justify-items: center;
+    align-items: center;
+
+    &__link {
+      color: $cyan;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid $cyan;
+
+      &:hover {
+        color: white;
+        border-color: white;
+        & img {
+          filter: grayscale(100%) brightness(110%);
+        }
+      }
+    }
+  }
+
+  &--testimonials {
+    // background: url('./images/bg-quotes.png') no-repeat top left 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    justify-items: center;
+    margin: auto;
+  }
+
+  &--get-started {
+    padding: 0rem 1.5rem;
+  }
+}
+
+.landing {
+  padding: 2rem;
+  max-width: 700px;
+  text-align: center;
+  margin: auto;
+
+  &__img {
+    margin-bottom: 1rem;
+  }
+
+  & p,
+  & h1 {
+    margin: 0 auto 1.5rem;
+    max-width: 500px;
+  }
+}
+
+.get-started {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  background-color: $bg-intro;
+  padding: 2rem;
+  transform: translateY(10rem);
+  border-radius: 0.5rem;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.05), 0px 6px 6px rgba(0, 0, 0, 0.1),
+    0px 10px 10px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.footer {
+  padding: 16rem 2rem 5rem;
+  background-color: $bg-footer;
+  width: 100%;
+
+  &__top,
+  &__bottom {
+    max-width: 1400px;
+    margin: auto;
+  }
+
+  &__top {
+    margin-bottom: 2rem;
+  }
+
+  &__bottom {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 4rem;
+  }
+
+  &__location,
+  &__contact {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 1rem 2rem;
+    align-items: start;
+    line-height: 2;
+  }
+
+  &__contact {
+    align-items: center;
+  }
+
+  &__col {
+    display: grid;
+    grid-gap: 2rem;
+    align-items: start;
+
+    &--left {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    &--right {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__links {
+    & li {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__link:hover {
+    font-weight: 700;
+  }
+
+  &__social {
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: center;
+
+    & li {
+      margin-right: 1rem;
+    }
+
+    &-link i {
+      display: inline-block;
+      font-size: 1rem;
+      line-height: 2rem;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      text-align: center;
+      vertical-align: middle;
+      border: 1px solid white;
+
+      &:hover {
+        color: $cyan;
+        border-color: $cyan;
+      }
+    }
+  }
+}
+
+// || btn
+
+.btn {
+  padding: 0.75rem 5rem;
+  border-radius: 1.5rem;
+
+  &--cta,
+  &--submit {
+    background: linear-gradient(to right, hsl(186, 60%, 57%), $blue);
+    color: white;
+
+    &:hover {
+      background: #8cdae4;
+    }
+  }
+
+  &--submit {
+    padding: 0.75rem;
+  }
+}
+
+// || card
+
+.card {
+  padding: 2rem;
+  text-align: center;
+  max-width: 400px;
+
+  &--testimonial {
+    background-color: $bg-testimonial;
+    position: relative;
+    text-align: left;
+    border-radius: 0.5rem;
+    box-shadow: 0px 2px 2px rgba($bg-testimonial, 0.05),
+      0px 4px 4px rgba($bg-testimonial, 0.1),
+      0px 6px 6px rgba($bg-testimonial, 0.15);
+
+    &__media {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    &__profile-img {
+      max-width: 50px;
+      border-radius: 50%;
+      margin-right: 1rem;
+    }
+
+    &__meta {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__author {
+      font-weight: 700;
+    }
+
+    &__author-title {
+      font-size: 12px;
+    }
+
+    &:first-child::before {
+      content: '';
+      background: url('./images/bg-quotes.png') no-repeat top left 2rem;
+      position: absolute;
+      top: -2rem;
+      left: -2.5rem;
+      height: 100px;
+      width: 100px;
+      z-index: -1;
+    }
+  }
+}
+
+.form {
+  &__label-offscreen {
+    position: absolute;
+    left: -10000px;
+  }
+
+  &__row {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    border-radius: 1.5rem;
+    border: none;
+    outline: none;
+    order: 1;
+  }
+
+  &__input-msg {
+    color: $error;
+    text-align: left;
+    padding-left: 1.5rem;
+    order: 2;
+    transform: translateY(-1rem);
+  }
+
+  &__submit {
+    order: 3;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .get-started {
+    transform: translateY(8rem);
+  }
+
+  .form {
+    &__row {
+      grid-template-columns: 2fr 1fr;
+      grid-gap: 0.25rem 1.5rem;
+    }
+
+    &__input-msg {
+      order: 3;
+      transform: none;
+    }
+
+    &__submit {
+      order: 2;
+    }
+  }
+
+  .footer {
+    padding: 14rem 2rem 5rem;
+  }
+}
+
+// || media queries
+@media screen and (min-width: 992px) {
+  .header {
+    padding: 3rem 4rem;
+
+    &__logo {
+      width: 10rem;
+    }
+  }
+
+  .section {
+    &--landing {
+      background-image: url('./images/bg-curvy-desktop.svg');
+    }
+
+    &--features,
+    &--how-it-works {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &--how-it-works,
+    &--testimonials {
+      padding: 2rem 6rem;
+    }
+
+    &--how-it-works {
+      grid-gap: 4rem;
+      & h2 {
+        font-size: 3rem;
+        line-height: 1.2;
+      }
+    }
+
+    &--testimonials {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  .get-started {
+    padding: 2rem 6rem;
+    & h2 {
+      font-size: 2rem;
+    }
+  }
+
+  .footer {
+    &__bottom {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &__col {
+      &--right {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    &__social {
+      grid-column: auto;
+    }
+  }
+}
